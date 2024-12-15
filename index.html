@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Houzing - Find Your Perfect Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <header class="relative min-h-screen hero-background">
+        <div class="image-overlay"></div>
+        <div class="relative z-10 container mx-auto px-6 py-4">
+            <nav class="flex justify-between items-center animate-fade-in-up">
+                <div class="text-3xl font-bold text-white tracking-wider">
+                    Houzing
+                </div>
+                <ul class="flex space-x-6 text-sm text-white">
+                    <li><a class="hover:text-blue-200 transition duration-300" href="#">HOME</a></li>
+                    <li><a class="hover:text-blue-200 transition duration-300" href="#">PROPERTIES</a></li>
+                    <li><a class="hover:text-blue-200 transition duration-300" href="#">ABOUT</a></li>
+                    <li><a class="hover:text-blue-200 transition duration-300" href="#">PAGES</a></li>
+                    <li><a class="hover:text-blue-200 transition duration-300" href="#">CONTACT</a></li>
+                </ul>
+                <div class="flex space-x-4 items-center">
+                    <div class="flex items-center space-x-2 text-white">
+                        <i class="fas fa-phone-alt text-blue-300"></i>
+                        <span>(+62) 1998 6886</span>
+                    </div>
+                    <a href="#" class="text-white hover:underline">Login / Register</a>
+                    <a href="#" class="bg-white text-blue-600 px-4 py-2 rounded-full hover:bg-blue-50 transition duration-300">
+                        CREATE LISTING
+                    </a>
+                </div>
+            </nav>
+
+            <div class="flex flex-col justify-center items-center text-center h-[calc(100vh-100px)]">
+                <p class="text-lg text-blue-200 animate-fade-in-up">
+                    IT'S GREAT TO BE HOME!
+                </p>
+                <h1 class="text-6xl font-bold mt-4 text-white animate-flip-in">
+                    Find Your Perfect Home
+                </h1>
+                <div class="flex space-x-6 mt-6 animate-fade-in-up">
+                    <a href="#" class="text-white hover:text-blue-200 transition">Rent</a>
+                    <a href="#" class="text-white hover:text-blue-200 transition">Sale</a>
+                    <a href="#" class="text-white hover:text-blue-200 transition">Sold</a>
+                </div>
+
+                <div class="bg-white/90 shadow-xl rounded-xl p-8 mt-8 w-full max-w-4xl animate-scale-hover">
+                    <div class="grid grid-cols-4 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">TYPE</label>
+                            <select class="mt-1 block w-full border-blue-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                                <option>Property Type</option>
+                                <option>Apartment</option>
+                                <option>House</option>
+                                <option>Villa</option>
+                                <option>Condo</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">LOCATIONS</label>
+                            <select class="mt-1 block w-full border-blue-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                                <option>All Cities</option>
+                                <option>Jakarta</option>
+                                <option>Bandung</option>
+                                <option>Surabaya</option>
+                                <option>Bali</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">SEARCH</label>
+                            <input type="text" placeholder="Enter keywords" class="mt-1 block w-full border-blue-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div class="flex items-end">
+                            <button class="bg-blue-500 text-white w-full py-2 rounded-md hover:bg-blue-600 transition duration-300 flex items-center justify-center">
+                                <i class="fas fa-search mr-2"></i>
+                                SEARCH
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-right">
+                        <a href="#" class="text-blue-600 hover:underline">Advanced Search</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Additional Property Section -->
+    <section class="container mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800">Featured Properties</h2>
+            <p class="text-gray-600 mt-4">Discover your dream home among our curated selection</p>
+        </div>
+
+        <div class="grid grid-cols-3 gap-8">
+            <!-- Property Card 1 -->
+            <div class="bg-white shadow-lg rounded-xl overflow-hidden transform transition hover:scale-105">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Modern House" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800">Modern Urban Apartment</h3>
+                    <p class="text-blue-600 font-bold mt-2">$450,000</p>
+                    <div class="mt-4 flex justify-between text-gray-600">
+                        <span>3 Bedrooms</span>
+                        <span>2 Bathrooms</span>
+                        <span>180 m²</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Card 2 -->
+            <div class="bg-white shadow-lg rounded-xl overflow-hidden transform transition hover:scale-105">
+                <img src="https://images.unsplash.com/photo-1517542117529-b6b058a13f51?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800">Luxury Beachfront Villa</h3>
+                    <p class="text-blue-600 font-bold mt-2">$1,200,000</p>
+                    <div class="mt-4 flex justify-between text-gray-600">
+                        <span>5 Bedrooms</span>
+                        <span>4 Bathrooms</span>
+                        <span>450 m²</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Card 3 -->
+            <div class="bg-white shadow-lg rounded-xl overflow-hidden transform transition hover:scale-105">
+                <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Cozy Condo" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800">Cozy City Center Condo</h3>
+                    <p class="text-blue-600 font-bold mt-2">$350,000</p>
+                    <div class="mt-4 flex justify-between text-gray-600">
+                        <span>2 Bedrooms</span>
+                        <span>1 Bathroom</span>
+                        <span>120 m²</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="listing-section bg-gray-100">
+        <div class="container mx-auto py-16 px-4">
+            <div class="text-center mb-16">
+                <h1 class="text-5xl font-light text-blue-800 mb-4 gradient-text">
+                    Elegant Property Listings
+                </h1>
+                <p class="text-blue-600 text-xl opacity-80">
+                    Discover Your Perfect Living Space
+                </p>
+            </div>
+    
+            <div id="propertyContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Property cards will be dynamically populated here -->
+            </div>
+    
+            <div class="flex justify-center mt-12">
+                <div id="pagination" class="flex space-x-3">
+                    <!-- Pagination dots will be dynamically generated -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="service-section bg-gradient-to-br from-blue-50 to-white min-h-screen">
+        <div class="container mx-auto px-4">
+            <div class="py-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-blue-800 mb-4 animate-fade-in">
+                        Why Choose Our Real Estate Services
+                    </h2>
+                    <p class="text-xl text-blue-600 font-light">
+                        Exceptional service tailored to your dream home journey
+                    </p>
+                </div>
+    
+                <div id="features-container" class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card-animation bg-white rounded-2xl shadow-xl p-8 text-center border-2 border-blue-100 hover-scale">
+                        <div class="inline-block mb-6">
+                            <div class="bg-blue-100 text-blue-600 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4 transform transition duration-300 hover:rotate-12">
+                                <i class="fas fa-smile text-5xl"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-blue-900 mb-4">
+                            Trusted By Thousands
+                        </h3>
+                        <p class="text-blue-700 font-light leading-relaxed">
+                            Our proven track record of success speaks volumes. We've helped thousands find their perfect home with personalized, expert guidance.
+                        </p>
+                    </div>
+    
+                    <div class="card-animation bg-white rounded-2xl shadow-xl p-8 text-center border-2 border-blue-100 hover-scale">
+                        <div class="inline-block mb-6">
+                            <div class="bg-blue-100 text-blue-600 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4 transform transition duration-300 hover:rotate-12">
+                                <i class="fas fa-home text-5xl"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-blue-900 mb-4">
+                            Wide Range Of Properties
+                        </h3>
+                        <p class="text-blue-700 font-light leading-relaxed">
+                            Explore over 1 million homes with diverse options. From cozy apartments to luxurious estates, we have the perfect property for you.
+                        </p>
+                    </div>
+    
+                    <div class="card-animation bg-white rounded-2xl shadow-xl p-8 text-center border-2 border-blue-100 hover-scale">
+                        <div class="inline-block mb-6">
+                            <div class="bg-blue-100 text-blue-600 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4 transform transition duration-300 hover:rotate-12">
+                                <i class="fas fa-hand-holding-usd text-5xl"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-blue-900 mb-4">
+                            Financing Made Easy
+                        </h3>
+                        <p class="text-blue-700 font-light leading-relaxed">
+                            Simplified financing solutions tailored to your needs. Our expert financial advisors make your home buying journey smooth and stress-free.
+                        </p>
+                    </div>
+    
+                    <div class="card-animation bg-white rounded-2xl shadow-xl p-8 text-center border-2 border-blue-100 hover-scale">
+                        <div class="inline-block mb-6">
+                            <div class="bg-blue-100 text-blue-600 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4 transform transition duration-300 hover:rotate-12">
+                                <i class="fas fa-map-marked-alt text-5xl"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-blue-900 mb-4">
+                            Explore Neighborhoods
+                        </h3>
+                        <p class="text-blue-700 font-light leading-relaxed">
+                            Discover detailed neighborhood insights. We provide comprehensive information to help you make an informed decision.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="explore-section min-h-screen">
+                <div class="container3 mx-auto px-4 py-12">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl font-light mb-4 tracking-wide text-blue-600">
+                            Explore Our Properties
+                        </h2>
+                        <p class="text-lg text-blue-600 opacity-75 max-w-2xl mx-auto">
+                            Discover elegant living spaces that blend comfort, style, and sophistication. Your perfect home awaits.
+                        </p>
+                    </div>
+            
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                        <div class="property-card rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105">
+                            <div class="relative group">
+                                <img src="https://storage.googleapis.com/a1aa/image/ZKds2IbYdPpDABw2yGckrnhLIrrk0sJ58YowkcujCVgEpNeJA.jpg" 
+                                     alt="House property" 
+                                     class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-blue-900 bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div class="text-white text-center">
+                                        <i class="fas fa-home text-5xl mb-3 text-blue-200"></i>
+                                        <p class="text-xl font-light tracking-wider">House</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="property-card rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105">
+                            <div class="relative group">
+                                <img src="https://storage.googleapis.com/a1aa/image/qwGAe9SweqgbzkzHaDT5pa52gfbqAgJKPFAbTZlANXrjItxnA.jpg" 
+                                     alt="Apartment property" 
+                                     class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-blue-900 bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div class="text-white text-center">
+                                        <i class="fas fa-building text-5xl mb-3 text-blue-200"></i>
+                                        <p class="text-xl font-light tracking-wider">Apartment</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="property-card rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105">
+                            <div class="relative group">
+                                <img src="https://storage.googleapis.com/a1aa/image/ADT2FJxCZWYlGhCkZEjGHx86xKgPsbfezUkrC6YbkwXOk24TA.jpg" 
+                                     alt="Condo property" 
+                                     class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-blue-900 bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div class="text-white text-center">
+                                        <i class="fas fa-city text-5xl mb-3 text-blue-200"></i>
+                                        <p class="text-xl font-light tracking-wider">Condo</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="property-card rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105">
+                            <div class="relative group">
+                                <img src="https://storage.googleapis.com/a1aa/image/UyeZ8QfJhdn52kFO8bVXFHyCOKwApHmwqCDMQPG1ywAUk24TA.jpg" 
+                                     alt="Villa property" 
+                                     class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-blue-900 bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div class="text-white text-center">
+                                        <i class="fas fa-umbrella-beach text-5xl mb-3 text-blue-200"></i>
+                                        <p class="text-xl font-light tracking-wider">Villa</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="property-card rounded-2xl overflow-hidden transform transition-all duration-300 hover:scale-105">
+                            <div class="relative group">
+                                <img src="https://storage.googleapis.com/a1aa/image/Be8Z40Oj8D0lfUSSHybijtWSCeefu2BY5ibg2hOYCerzDpNeJA.jpg" 
+                                     alt="Town property" 
+                                     class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-blue-900 bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <div class="text-white text-center">
+                                        <i class="fas fa-guitar text-5xl mb-3 text-blue-200"></i>
+                                        <p class="text-xl font-light tracking-wider">Town</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer">
+                <div class="container4">
+                 <div class="column4">
+                  <h3>
+                   PT ANGKASA PURA PROPERTI
+                  </h3>
+                  <p>
+                   Sainath Tower Lt.10, Jl. Selangit B9 No.7
+                  </p>
+                  <p>
+                   Gunung Sahari Kemayoran Jakarta Pusat - 10610
+                  </p>
+                  <p>
+                   ph. (021) 26051919
+                  </p>
+                  <div class="social-icons">
+                   <a class="instagram" href="#">
+                    <i class="fab fa-instagram"></i>
+                   </a>
+                   <a class="linkedin" href="#">
+                    <i class="fab fa-linkedin"></i>
+                   </a>
+                   <a class="youtube" href="#">
+                    <i class="fab fa-youtube"></i>
+                   </a>
+                  </div>
+                 </div>
+                 <div class="column4">
+                  <h3>
+                   TENTANG KAMI
+                  </h3>
+                  <a href="#">
+                   Profil Perusahaan
+                  </a>
+                  <a href="#">
+                   Manajemen
+                  </a>
+                  <a href="#">
+                   Tata Kelola
+                  </a>
+                  <a href="#">
+                   Perusahaan
+                  </a>
+                 </div>
+                 <div class="column4">
+                  <h3>
+                   LINGKUP BISNIS
+                  </h3>
+                  <a href="#">
+                   Properti &amp; Komersial
+                  </a>
+                  <a href="#">
+                   Beautifikasi &amp; Revitalisasi
+                  </a>
+                 </div>
+                 <div class="column4">
+                  <h3>
+                   PUSAT MEDIA
+                  </h3>
+                  <a href="#">
+                   Berita Perusahaan
+                  </a>
+                  <a href="#">
+                   Info Lelang
+                  </a>
+                  <a href="#">
+                   Karir
+                  </a>
+                 </div>
+                 <div class="column4">
+                  <h3>
+                   BANTUAN
+                  </h3>
+                  <a href="#">
+                   Hubungi Kami
+                  </a>
+                  <a href="#">
+                   Portal
+                  </a>
+                 </div>
+                </div>
+               </div>
+               <div class="footer-bottom">
+                © 2021 PT ANGKASA PURA PROPERTI
+               </footer>
+</body>
+</html>
