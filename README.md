@@ -1,2 +1,3 @@
 # Website-UAS-Ardhian
-Web
+Ardhian Purnomo/K3523016
+Web properti
